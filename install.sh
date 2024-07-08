@@ -39,6 +39,7 @@ if [ -d shuffle-database ]; then
 	fi
 fi
 
+#adding firewall rule to access backend server from orborus
 if [ "$running_dockers" == *"orborus"* ]; then
 	backend_server=$(cat .env | grep OUTER_HOSTNAME | awk -F '=' '{print $2}')
 	ufw allow out to $backend_server > /dev/null 2>&1
