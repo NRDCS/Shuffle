@@ -35,4 +35,4 @@ if [ -d shuffle-database ]; then
 	if [[ "$db_status" == *"succeeded"* ]] && [[ "$backend_status" != *"succeeded"* ]]; then
 		docker restart shuffle-backend
 	fi
-fi	
+fi
